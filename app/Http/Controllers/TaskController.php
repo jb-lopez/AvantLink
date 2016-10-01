@@ -37,6 +37,32 @@ class TaskController extends Controller
     }
 
     /**
+     * Display a list of all of the user's task in json.
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function json(Request $request)
+    {
+        return view('tasks.json', [
+            'tasks' => $this->tasks->forUser($request->user()),
+        ]);
+    }
+
+    /**
+     * Display the angular template form.
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function template(Request $request)
+    {
+        return view('tasks.template', [
+            'tasks' => $this->tasks->forUser($request->user()),
+        ]);
+    }
+
+    /**
      * Create a new task.
      *
      * @param  Request  $request

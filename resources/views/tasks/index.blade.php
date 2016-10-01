@@ -46,8 +46,11 @@
 
                     <!-- Table Headings -->
                     <thead>
-                        <th>Task</th>
-                        <th>&nbsp;</th>
+                        <tr>
+                            <th>Task</th>
+                            <th>Created</th>
+                            <th>&nbsp;</th>
+                        </tr>
                     </thead>
 
                     <!-- Table Body -->
@@ -57,6 +60,11 @@
                                 <!-- Task Name -->
                                 <td class="table-text">
                                     <div>{{ $task->name }}</div>
+                                </td>
+
+                                <!-- Task Created -->
+                                <td class="table-text">
+                                    <div>{{ $task->created_at }}</div>
                                 </td>
 
                                 <!-- Delete Button -->
@@ -74,8 +82,47 @@
                         @endforeach
                     </tbody>
                 </table>
+
+                <task-list></task-list>
+
             </div>
         </div>
+
+        <script>
+            function deleteTask(id){
+                var taskID = id.split('_');
+                var ID = taskID[1];
+                var taskForm = $('#form-delete-task-' + ID);
+                var taskTR = taskForm.parent().parent();
+                $.ajax({
+                    type: "POST",
+                    url: '/task/'+ID,
+                    data: taskForm.serialize(),
+                    success: function(data){
+                        taskTR.remove();
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        alert('There was an error communicating with the server.');
+                    }
+                });
+            }
+
+            function createTask(task){
+                $.ajax({
+                    type: "POST",
+                    url: taskForm.attr('action'),
+                    data: taskForm.serialize(),
+                    success: function(data){
+                        taskTR.remove();
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        alert('There was an error communicating with the server.');
+                    }
+                });
+            }
+        </script>
+
+
     @endif
 
 @endsection
