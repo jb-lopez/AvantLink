@@ -53,7 +53,7 @@
                     <!-- Table Body -->
                     <tbody>
                         @foreach ($tasks as $task)
-                            <tr>
+                            <tr id="task-{{$task->id}}">
                                 <!-- Task Name -->
                                 <td class="table-text">
                                     <div>{{ $task->name }}</div>
