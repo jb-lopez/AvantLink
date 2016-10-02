@@ -28,3 +28,8 @@ This was overcome by the use of the Laravel comment tag, `@{{}}`, which renders 
 
 The user tests are minimalistic, as most of the functionality is provided by the frameworks, and their functionality is covered by their built-in tests.
 
+## Demo
+
+A demo is available at [https://avantlink.saige.me/](https://avantlink.saige.me/).
+Use the email `demo@demo.demo` and the password `password`, or sign up with a new one.
+
