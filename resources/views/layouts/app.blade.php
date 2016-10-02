@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="taskListApp" >
+<html lang="en" >
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -78,7 +78,7 @@
     <!-- JavaScripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js" integrity="sha384-1DZPyfhO1j3kVj8ePk2T5PRxHp2LHNqDtXULB8GTlGG9ChPjxgQL59psITW7ZKml" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.12/angular.min.js" integrity="sha384-UpC+ggBb3hFhX+vvVfkQqYf5nycUvyZDTrhJB6LY4ShkK2G2qi7tgEWq6odQxmK0" crossorigin="anonymous"></script>
         {{-- <script src="{{ elixir('js/controllers.js') }}"></script> --}}
         <script src="/controllers.js" ></script>
     </body>

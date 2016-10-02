@@ -50,19 +50,6 @@ class TaskController extends Controller
     }
 
     /**
-     * Display the angular template form.
-     *
-     * @param  Request  $request
-     * @return Response
-     */
-    public function template(Request $request)
-    {
-        return view('tasks.template', [
-            'tasks' => $this->tasks->forUser($request->user()),
-        ]);
-    }
-
-    /**
      * Create a new task.
      *
      * @param  Request  $request
