@@ -1,5 +1,7 @@
 # Demo for AvantLink.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c705e6d6e10e4c96ade315231656bbfb)](https://www.codacy.com/app/jbspublic/AvantLink?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jbsaige/AvantLink&amp;utm_campaign=Badge_Grade)
+
 This is a demo task list with multi-user support for AvantLink.
 
 This demo utilizes
