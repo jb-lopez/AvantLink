@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
-var taskListApp = angular.module('taskListApp', []);
+var taskListApp = angular.module("taskListApp", []);
 
-taskListApp.controller('TaskListController', function($scope, $http) {
+taskListApp.controller("TaskListController", function($scope, $http) {
     $scope.refresh = function() {
-        $http.get('/tasks/json').success(function(data) {
+        $http.get("/tasks/json").success(function(data) {
             $scope.tasks = data;
         });
     };
