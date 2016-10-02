@@ -1,27 +1,26 @@
-# Laravel PHP Framework
+# Demo for AvantLink.
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+This is a demo task list with multi-user support for AvantLink.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+This demo utilizes
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+* Laravel 5
+* Angular 1.4
 
-## Official Documentation
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+## Description
 
-## Contributing
+The task list uses Laravel for the back end and for compiling the front end (views).  Angular is used in the task list to render the view.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+## Hurdles Overcome
 
-## Security Vulnerabilities
+* The first attempt was with Angular 1.5.x.
+This worked great, except for the fact that there were no user documentation (e.g.: stackoverflow) about accessing a controller's functions from outside the controller (e.g.: in jQuery).
+In the end, it was easier to switch to Angular 1.4.x, and loose the components and templates 1.5.x provided than to figure out undocumented code.
+* Laravel and Angular both use the double curly bracket notation. `{{}}`
+This was overcome by the use of the Laravel comment tag, `@{{}}`, which renders to the view as `{{}}` so that Angular can use it.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+## Unit/Integration Testing
 
-## License
+The user tests are minimalistic, as most of the functionality is provided by the frameworks, and their functionality is covered by their built-in tests.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
