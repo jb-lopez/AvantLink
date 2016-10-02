@@ -12,7 +12,9 @@ This demo utilizes
 
 ## Description
 
-The task list uses Laravel for the back end and for compiling the front end (views).  Angular is used in the task list to render the view.
+The task list uses Laravel for the back end and for compiling the front end (views).
+Angular is used in the task list to render the view.
+Laravel is used on the backend as an API, to which tasks can be added, deleted, and fetched.
 
 ## Hurdles Overcome
 
