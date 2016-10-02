@@ -11,5 +11,13 @@ angular
             $http.get('/tasks/json').then(function(response) {
                 self.tasks = response.data;
             });
+
+            self.addTask = function(formData){
+                $http.post('/task', formData).then(function(response){
+                    $http.get('/tasks/json').then(function(response) {
+                        self.tasks = response.data;
+                    });
+                });
+            }
         }
     });
