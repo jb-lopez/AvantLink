@@ -18,6 +18,7 @@ Laravel is used on the backend as an API, to which tasks can be added, deleted, 
 
 ## Hurdles Overcome
 
+* Learning Angular.  Before two days ago, I did not know any Angular.
 * The first attempt was with Angular 1.5.x.
 This worked great, except for the fact that there were no user documentation (e.g.: stackoverflow) about accessing a controller's functions from outside the controller (e.g.: in jQuery).
 In the end, it was easier to switch to Angular 1.4.x, and loose the components and templates 1.5.x provided than to figure out undocumented code.
